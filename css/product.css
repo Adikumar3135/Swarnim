@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #111827);
+    color: white;
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+
+    background: linear-gradient(45deg, #38bdf8, #a855f7);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+    padding: 50px 8% 100px;
+}
+
+.category-container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 35px;
+}
+
+/* Card */
+
+.category-card {
+    position: relative;
+
+    background: rgba(255,255,255,0.05);
+
+    border-radius: 30px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: white;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.5s;
+}
+
+.category-card:hover {
+    transform: translateY(-15px);
+
+    background: rgba(56,189,248,0.08);
+
+    box-shadow: 0 0 35px rgba(56,189,248,0.2);
+}
+
+/* Glow Effect */
+
+.category-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    background: rgba(56,189,248,0.15);
+
+    border-radius: 50%;
+
+    top: -80px;
+    right: -80px;
+
+    filter: blur(50px);
+}
+
+/* Icon */
+
+.icon {
+    width: 100px;
+    height: 100px;
+
+    margin: auto;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(45deg, #38bdf8, #a855f7);
+
+    font-size: 2.8rem;
+
+    box-shadow: 0 0 25px rgba(56,189,248,0.4);
+
+    transition: 0.5s;
+}
+
+.category-card:hover .icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Text */
+
+.category-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size: 2.5rem;
+    }
+
+    .categories{
+        padding: 40px 5% 80px;
+    }
+}
+
+@media(max-width:500px){
+
+    .category-card{
+        padding: 35px 20px;
+    }
+
+    .category-card h2{
+        font-size: 1.5rem;
+    }
+
+    .icon{
+        width: 85px;
+        height: 85px;
+        font-size: 2.2rem;
+    }
+}
+
+
+.back-btn {
+            padding: 12px 24px;
+
+            border-radius: 30px;
+
+            background: linear-gradient(45deg, #38bdf8, #a855f7);
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
